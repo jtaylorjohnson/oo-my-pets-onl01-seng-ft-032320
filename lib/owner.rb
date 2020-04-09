@@ -7,34 +7,34 @@ class Owner
     @name = name
     @species = "human"
     @@all << self
-    @@pets = {:dogs => [], :cats => []}
+    @pets = {:dogs => [], :cats => []}
   end
   
 
   def buy_dog(name_of_dog)
-    @@pets[:dogs] << Dog.new(name_of_dog)
+    @pets[:dogs] << Dog.new(name_of_dog)
     # name_of_dog.owner = self 
   end
 
   def buy_cat(name_of_cat)
-    @@pets[:cats] << Cat.new(name_of_cat)
+    @pets[:cats] << Cat.new(name_of_cat)
   end
 
   def walk_dogs
-    @@pets[:dogs].each do |dog|
+    @pets[:dogs].each do |dog|
       dog.mood = 'happy'
         end
       end
 
   def feed_cats
-    @@pets[:cats].each do |cat|
+    @pets[:cats].each do |cat|
       cat.mood = 'happy'
     end
   end
 
 
   def sell_pets
-    @@pets.collect do |species, instances|
+    @pets.collect do |species, instances|
       instances.each do |pet|
         pet.mood = "nervous"
       end
