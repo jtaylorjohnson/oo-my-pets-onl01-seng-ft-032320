@@ -43,6 +43,7 @@ class Owner
     @pets.collect do |species, pet_array|
       pet_array.each do |pet|
         pet.mood = "nervous"
+        pet.owner = nil
       end
       pet_array.clear
       
