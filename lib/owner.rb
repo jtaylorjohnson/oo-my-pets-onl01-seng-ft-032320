@@ -45,6 +45,7 @@ class Owner
         pet.mood = "nervous"
       end
       pet_array.clear
+      
     end
   end
 
