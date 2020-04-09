@@ -40,11 +40,11 @@ class Owner
 
 
   def sell_pets
-    @pets.collect do |species, instances|
-      instances.each do |pet|
+    @pets.collect do |species, pet_array|
+      pet_array.each do |pet|
         pet.mood = "nervous"
       end
-      instances.clear
+      pet_array.clear
     end
   end
 
